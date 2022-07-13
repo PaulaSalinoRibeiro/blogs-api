@@ -1,6 +1,7 @@
 const httpStatusCode = {
   BadRequest: 400,
   InternalServer: 500,
+  Conflict: 409,
 };
 
 const erroHandler = (err, _req, res, _next) => {
