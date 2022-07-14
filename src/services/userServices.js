@@ -33,6 +33,14 @@ const create = async (displayName, email, password, image) => {
   return token;
 };
 
+const listAll = async () => {
+  const result = await User.findAll({
+    attributes: ['id', 'displayName', 'email', 'image'],
+  });
+  return result;
+};
+
 module.exports = {
   create,
+  listAll,
 };
