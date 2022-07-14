@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657826128648" clover="3.2.0">
-  <project timestamp="1657826128648" name="All files">
-    <metrics statements="49" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="12" elements="67" coveredelements="51" complexity="0" loc="49" ncloc="49" packages="1" files="6" classes="6"/>
+<coverage generated="1657831155029" clover="3.2.0">
+  <project timestamp="1657831155029" name="All files">
+    <metrics statements="49" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="14" elements="67" coveredelements="56" complexity="0" loc="49" ncloc="49" packages="1" files="6" classes="6"/>
     <file name="checkModelFile.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/checkModelFile.js">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
@@ -28,28 +28,14 @@
       <line num="4" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
-      <line num="9" count="6" type="stmt"/>
-      <line num="10" count="6" type="stmt"/>
-      <line num="12" count="6" type="stmt"/>
-      <line num="14" count="6" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
     </file>
     <file name="checkSimpleAssociation.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/checkSimpleAssociation.js">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-    </file>
-    <file name="checkThroughAssociation.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/checkThroughAssociation.js">
-      <metrics statements="14" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
@@ -58,11 +44,25 @@
       <line num="8" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
       <line num="11" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+    </file>
+    <file name="checkThroughAssociation.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/checkThroughAssociation.js">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
       <line num="34" count="1" type="stmt"/>
     </file>
     <file name="index.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/index.js">

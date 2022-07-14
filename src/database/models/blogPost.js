@@ -1,4 +1,3 @@
-const { INTEGER } = require("sequelize");
 
 const BlogPost = (sequelize, DataTypes) => {
   const BlogPost = sequelize.define('BlogPost', {
@@ -13,7 +12,8 @@ const BlogPost = (sequelize, DataTypes) => {
   BlogPost.associate = (models) => {
     BlogPost.belongsTo(models.User, {
       foreingKey: 'userId', as: 'Users'
-    })
+    });
+
   }
 
   return BlogPost;
