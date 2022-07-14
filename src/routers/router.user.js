@@ -10,4 +10,6 @@ routerUser.use(authToken);
 
 routerUser.get('/', userController.listAll);
 
+routerUser.get('/:id', userController.findById);
+
 module.exports = routerUser;

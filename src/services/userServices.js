@@ -40,7 +40,20 @@ const listAll = async () => {
   return result;
 };
 
+const findById = async (id) => {
+  const result = await User.findOne({ where: { id }, attributes: { exclude: ['password'] } });
+
+  if (!result) {
+    const e = new Error('User does not exist');
+    e.code = 'NotFound';
+    throw e;
+  }
+
+  return result;
+};
+
 module.exports = {
   create,
   listAll,
+  findById,
 };

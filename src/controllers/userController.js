@@ -15,7 +15,18 @@ const listAll = async (_req, res) => {
   res.status(200).json(users);
 };
 
+const findById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const user = await userServices.findById(id);
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   createUser,
   listAll,
+  findById,
 };
