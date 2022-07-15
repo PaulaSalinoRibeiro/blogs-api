@@ -45,13 +45,24 @@ const create = async (title, content, categoryIds, user) => {
     .create({ postId: newPost.id, categoryId: item }, { transaction: t })));
     
     await t.commit();
+
     const result = formatted(newPost);
+    
     return result;
   } catch (err) {
     await t.rollback();
+
     throwError('BadRequest', '"categoryIds" not found');
   }
 };
+
+// const listAll = async () => {
+//   const list = await BlogPost.findAll({
+//     includes: [
+//       { model: User },
+//     ],
+//   });
+// };
 
 module.exports = {
   create,

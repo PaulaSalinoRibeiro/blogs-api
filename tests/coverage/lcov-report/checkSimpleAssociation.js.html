@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.76% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.36% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,22 +92,22 @@
 <a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -118,22 +118,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { sequelize, dataTypes } = require('sequelize-jest-helpers');
 const { basename } = require('path')
 &nbsp;
-const checkAssocitationExists = <span class="fstat-no" title="function not covered" >mo</span>delPath =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(m</span>ethod) =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(f</span>oreignModelName) =&gt; {</span></span>
-  const testTitle = <span class="cstat-no" title="statement not covered" >`Será validado que o modelo em '${basename(modelPath)}', define a associação '${method}', com a entidade de nome '${foreignModelName}'`</span>
+const checkAssocitationExists = modelPath =&gt; (method) =&gt; (foreignModelName) =&gt; {
+  const testTitle = `Será validado que o modelo em '${basename(modelPath)}', define a associação '${method}', com a entidade de nome '${foreignModelName}'`
   
-<span class="cstat-no" title="statement not covered" >  it(testTitle, <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-    const EntityModel = <span class="cstat-no" title="statement not covered" >require(modelPath);</span>
-    const Entity = <span class="cstat-no" title="statement not covered" >EntityModel(sequelize, dataTypes);</span>
+  it(testTitle, () =&gt; {
+    const EntityModel = require(modelPath);
+    const Entity = EntityModel(sequelize, dataTypes);
     
-    const model = <span class="cstat-no" title="statement not covered" >{</span>
+    const model = {
       [foreignModelName]: { 
         expectAssociationWith: foreignModelName
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    Entity.associate(model);</span>
+    Entity.associate(model);
     
-<span class="cstat-no" title="statement not covered" >    expect(Entity[method]).toBeCalledWith(</span>
+    expect(Entity[method]).toBeCalledWith(
       model[foreignModelName],
       expect.objectContaining({})
     );
@@ -148,7 +148,7 @@ module.exports = checkAssocitationExists
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jul 14 2022 17:39:15 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Jul 15 2022 16:06:34 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="prettify.js"></script>
         <script>

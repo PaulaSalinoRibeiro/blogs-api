@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">22.22% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>4/18</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,27 +101,27 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,17 +134,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { sequelize, dataTypes } = require('sequelize-jest-helpers');
 const { basename } = require('path')
 &nbsp;
-const checkThroughAssociation = modelPath =&gt; foreignAModelsNames =&gt; method =&gt; foreignBModelsNames =&gt; {
-  const testTitle = `Será validado que o modelo em '${basename(modelPath)}', através do(s) modelos(s) de nome(s) '${foreignAModelsNames.join('; ')}', define a associação '${method}' respectivamente, com o(s) modelo(s) de nome(s) '${foreignBModelsNames.join(', ')}'`
+const checkThroughAssociation = <span class="fstat-no" title="function not covered" >mo</span>delPath =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fo</span>reignAModelsNames =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >me</span>thod =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fo</span>reignBModelsNames =&gt; {</span></span></span>
+  const testTitle = <span class="cstat-no" title="statement not covered" >`Será validado que o modelo em '${basename(modelPath)}', através do(s) modelos(s) de nome(s) '${foreignAModelsNames.join('; ')}', define a associação '${method}' respectivamente, com o(s) modelo(s) de nome(s) '${foreignBModelsNames.join(', ')}'`</span>
   
-  it(testTitle, () =&gt; {
-    const EntityModel = require(modelPath);
-    const Entity = EntityModel(sequelize, dataTypes);
+<span class="cstat-no" title="statement not covered" >  it(testTitle, <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+    const EntityModel = <span class="cstat-no" title="statement not covered" >require(modelPath);</span>
+    const Entity = <span class="cstat-no" title="statement not covered" >EntityModel(sequelize, dataTypes);</span>
     
-    let models = [];
+    let models = <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-    foreignAModelsNames.forEach(modelName =&gt; {
-      models = {
+<span class="cstat-no" title="statement not covered" >    foreignAModelsNames.forEach(<span class="fstat-no" title="function not covered" >mo</span>delName =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      models = {</span>
         ...models,
         [modelName]: { 
           [method]: jest.fn() 
@@ -152,10 +152,10 @@ const checkThroughAssociation = modelPath =&gt; foreignAModelsNames =&gt; method
       };
     });
 &nbsp;
-    Entity.associate(models);
+<span class="cstat-no" title="statement not covered" >    Entity.associate(models);</span>
 &nbsp;
-    for(let i = 0; i &lt; foreignAModelsNames.length; i+=1){
-      expect(models[foreignAModelsNames[i]][method])
+<span class="cstat-no" title="statement not covered" >    for(let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; foreignAModelsNames.length; i+=1){</span>
+<span class="cstat-no" title="statement not covered" >      expect(models[foreignAModelsNames[i]][method])</span>
         .toBeCalledWith(
           models[foreignBModelsNames[i]],
           expect.objectContaining({})
@@ -172,7 +172,7 @@ module.exports = checkThroughAssociation
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jul 14 2022 17:39:15 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Jul 15 2022 16:06:34 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="prettify.js"></script>
         <script>

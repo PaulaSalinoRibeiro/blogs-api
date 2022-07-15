@@ -5,15 +5,15 @@ const BlogPost = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     userId: {type: DataTypes.INTEGER, foreignKey: true },
-    createdAt: {
+    published: {
       type: DataTypes.DATE, 
       defaultValue: DataTypes.NOW,
-      field: 'published'
+      
     },
-    updatedAt: {
+    updated: {
       type: DataTypes.DATE, 
       defaultValue: DataTypes.NOW,
-      field: 'updated'
+      
     }
   })
 
