@@ -1,12 +1,20 @@
 
 const BlogPost = (sequelize, DataTypes) => {
   const BlogPost = sequelize.define('BlogPost', {
-    id: { type: DataTypes.INTEGER, primaryKey: true},
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     userId: {type: DataTypes.INTEGER, foreignKey: true },
-    published: DataTypes.DATE,
-    updated: DataTypes.DATE,
+    createdAt: {
+      type: DataTypes.DATE, 
+      defaultValue: DataTypes.NOW,
+      field: 'published'
+    },
+    updatedAt: {
+      type: DataTypes.DATE, 
+      defaultValue: DataTypes.NOW,
+      field: 'updated'
+    }
   })
 
   BlogPost.associate = (models) => {

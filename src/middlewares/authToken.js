@@ -10,7 +10,9 @@ const authToken = (req, _res, next) => {
       throw e;
     }
 
-    JWT.checkToken(authorization);
+    const userEmail = JWT.checkToken(authorization);
+    
+    req.user = userEmail;
     next();
   } catch (err) {
     next(err);
