@@ -56,14 +56,21 @@ const create = async (title, content, categoryIds, user) => {
   }
 };
 
-// const listAll = async () => {
-//   const list = await BlogPost.findAll({
-//     includes: [
-//       { model: User },
-//     ],
-//   });
-// };
+const listAll = async () => {
+  const list = await BlogPost.findAll({
+    include: [
+    {
+      model: User, as: 'user', attributes: { exclude: ['password'] },
+    },
+    {
+      model: Category, as: 'categories', attributes: ['id', 'name'],
+    },
+  ],
+  });
+  return list;
+};
 
 module.exports = {
   create,
+  listAll,
 };

@@ -8,4 +8,6 @@ routerPost.use(authToken);
 
 routerPost.post('/', postController.create);
 
+routerPost.get('/', postController.listAll);
+
 module.exports = routerPost;

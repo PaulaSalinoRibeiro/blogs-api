@@ -8,18 +8,21 @@ const BlogPost = (sequelize, DataTypes) => {
     published: {
       type: DataTypes.DATE, 
       defaultValue: DataTypes.NOW,
-      
+      field: 'published'
     },
     updated: {
       type: DataTypes.DATE, 
       defaultValue: DataTypes.NOW,
-      
+      field: 'updated'
     }
+  }, {
+    createdAt: 'published',
+    updatedAt: 'updated'
   })
 
   BlogPost.associate = (models) => {
     BlogPost.belongsTo(models.User, {
-      foreingKey: 'userId', as: 'Users'
+      foreingKey: 'userId', as: 'user'
     });
 
   }

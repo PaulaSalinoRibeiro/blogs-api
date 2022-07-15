@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657911994104" clover="3.2.0">
-  <project timestamp="1657911994105" name="All files">
+<coverage generated="1657914330212" clover="3.2.0">
+  <project timestamp="1657914330212" name="All files">
     <metrics statements="49" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="12" elements="67" coveredelements="51" complexity="0" loc="49" ncloc="49" packages="1" files="6" classes="6"/>
     <file name="checkModelFile.js" path="/Users/paularibeiro/Documents/Paula/trybe/projetos/sd-019-c-project-blogs-api/tests/assets/helper/checkModelFile.js">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

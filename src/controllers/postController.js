@@ -12,6 +12,16 @@ const create = async (req, res, next) => {
   }
 };
 
+const listAll = async (_req, res, next) => {
+  try {
+    const result = await postServices.listAll();
+    res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
+  listAll,
 };
