@@ -21,7 +21,18 @@ const listAll = async (_req, res, next) => {
   }
 };
 
+const findById = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const result = await postServices.findById(id);
+    res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   listAll,
+  findById,
 };
