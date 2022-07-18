@@ -10,6 +10,8 @@ routerUser.use(authToken);
 
 routerUser.get('/', userController.listAll);
 
+routerUser.delete('/me', userController.remove);
+
 routerUser.get('/:id', userController.findById);
 
 module.exports = routerUser;

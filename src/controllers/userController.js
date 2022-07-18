@@ -25,8 +25,19 @@ const findById = async (req, res, next) => {
   }
 };
 
+const remove = async (req, res, next) => {
+  const userEmail = req.user;
+  try {
+    await userServices.remove(userEmail);
+    res.status(204).end();
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   createUser,
   listAll,
   findById,
+  remove,
 };
