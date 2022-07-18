@@ -10,6 +10,8 @@ routerPost.post('/', postController.create);
 
 routerPost.get('/', postController.listAll);
 
+routerPost.get('/search', postController.getSearch);
+
 routerPost.get('/:id', postController.findById);
 
 routerPost.put('/:id', postController.updated);
