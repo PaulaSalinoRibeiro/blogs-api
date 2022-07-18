@@ -12,4 +12,6 @@ routerPost.get('/', postController.listAll);
 
 routerPost.get('/:id', postController.findById);
 
+routerPost.put('/:id', postController.updated);
+
 module.exports = routerPost;

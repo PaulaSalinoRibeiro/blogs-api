@@ -31,8 +31,22 @@ const findById = async (req, res, next) => {
   }
 };
 
+const updated = async (req, res, next) => {
+  const { title, content } = req.body;
+  const { id } = req.params;
+  const userEmail = req.user;
+  
+  try {
+    const result = await postServices.updated(title, content, id, userEmail);
+    res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   listAll,
   findById,
+  updated,
 };
