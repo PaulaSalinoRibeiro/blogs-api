@@ -44,9 +44,21 @@ const updated = async (req, res, next) => {
   }
 };
 
+const remove = async (req, res, next) => {
+  const { id } = req.params;
+  const userEmail = req.user;
+  try {
+    await postServices.remove(id, userEmail);
+    res.status(204).end();
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   create,
   listAll,
   findById,
   updated,
+  remove,
 };

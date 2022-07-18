@@ -109,9 +109,27 @@ const updated = async (title, content, id, email) => {
   return result;
 };
 
+const remove = async (id, email) => {
+  const postExist = await BlogPost.findOne({ where: { id } });
+  
+  if (!postExist) throwError('NotFound', 'Post does not exist'); 
+
+  const user = await User.findOne({ where: { email } });
+
+  const post = await BlogPost.findAll({
+    where: { [Op.and]: [{ id }, { userId: user.id }] } });
+
+  if (post.length === 0) throwError('Unauthorized', 'Unauthorized user');
+
+  const deletePost = await BlogPost.destroy({ where: { id } });
+
+  return deletePost;
+};
+
 module.exports = {
   create,
   listAll,
   findById,
   updated,
+  remove,
 };
