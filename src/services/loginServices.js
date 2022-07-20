@@ -1,5 +1,6 @@
 const Joi = require('joi');
 const JWT = require('./jwt.services');
+const Password = require('./handle.password');
 const { User } = require('../database/models');
 
 const schema = Joi.object({
@@ -17,6 +18,8 @@ const login = async (email, password) => {
   }
   
   const userLogin = await User.findOne({ where: { email } });
+
+  Password.checkPassword(password, userLogin.password);
   
   if (!userLogin) {
     const err = new Error('Invalid fields');

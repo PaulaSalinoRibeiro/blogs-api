@@ -1,6 +1,7 @@
 const Joi = require('joi');
 const { User } = require('../database/models');
 const JWT = require('./jwt.services');
+const Password = require('./handle.password');
 
 const schema = Joi.object({
   displayName: Joi.string().min(8).required(),
@@ -26,7 +27,9 @@ const create = async (displayName, email, password, image) => {
     throw err;
   }
 
-  await User.create({ displayName, email, password, image });
+  const passwordHash = Password.encryptPassword(password);
+
+  await User.create({ displayName, email, password: passwordHash, image });
 
   const token = JWT.createToken(email);
 
