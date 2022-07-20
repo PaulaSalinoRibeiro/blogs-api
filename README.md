@@ -20,7 +20,7 @@ Esse projeto consiste de uma API RESTFULL
 
 ## Rotas
 
-### POST/login
+### POST /login
 
 Essa rota permite fazer o login
 
@@ -41,7 +41,7 @@ A resposta recebida é um token
 }
 ```
 
-### POST/user 
+### POST /user 
 
 Essa rota permite fazer o cadastro de um novo usuario
 
@@ -62,7 +62,7 @@ A resposta recebida é um token
 }
 ```
 
-### GET/user
+### GET /user
 
 Essa rota permite listar todos os usuarios cadastrados
 
@@ -115,7 +115,7 @@ Exemplo de resposta recebida
 }
 ``` 
 
-### POST/categories
+### POST /categories
 
 Essa rota permite criar uma nova categoria
 
@@ -138,7 +138,7 @@ Exemplo de resposta
 }
 ```
 
-### GET/categories
+### GET /categories
 
 Essa rota permite listar todas as categorias
 
@@ -190,7 +190,7 @@ Exemplo de resposta
 }
 ```
 
-### GET/post
+### GET /post
 
 Essa rota permite listar todos os posts 
 
