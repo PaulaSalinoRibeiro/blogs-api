@@ -8,6 +8,24 @@ Esse projeto consiste de uma API RESTFULL
 - Rodar o comando `npm install`
 - Rodar o comando `npm start` ou `npm run debug` para utilizar o `nodemon`
 
+- criar um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente:
+
+```
+#### SERVER VARS
+NODE_ENV=development
+API_PORT=3000
+
+#### DATABASE VARS
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_DB_NAME=blogs-api
+MYSQL_USER=root
+MYSQL_PASSWORD=password
+
+#### SECRECT VARS
+JWT_SECRET=secretJWT
+```
+
 ## Tecnologias e bibliotecas utilizadas
 
 - Express
